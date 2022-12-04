@@ -1,0 +1,38 @@
+{
+    "name": "extend/magento-breeze-module",
+    "description": "Breeze Compatibility module for Extend Warranty",
+    "require": {
+        "magento/framework": ">=101.0",
+        "extend/module-warranty": "dev-master",
+        "swissup/module-breeze": "^2.0.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Gamma Partners LLC",
+            "email": "support@gammapartners.com",
+            "homepage": "https://www.gammapartners.com",
+            "role": "Support"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Extend\\WarrantyBreeze\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": {
+        "extend": {
+            "type": "git",
+            "url": "https://github.com/helloextend/magento-extension/"
+        }
+    }
+}
