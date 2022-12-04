@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Extend Warranty
+ *
+ * Guidance Magento Team <magento@guidance.com>
+ * Copyright (c) 2022 Guidance Solutions (http://www.guidance.com)
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceBlock name="extend.warranty.js">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Extend_WarrantyBreeze::installation.phtml</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceBlock name="breeze.js">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="extendWarranty" xsi:type="array">
+                        <item name="items" xsi:type="array">
+
+                            <!-- 'extendInstallment' - is the name used in data-mage-init or x-magento-init -->
+                            <item name="extendInstallment" xsi:type="array">
+                                <!-- Path to file with component declaration -->
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
+
+                                <!-- Optional. Helpful if you use multiple names for the same component -->
+                                <!-- 1. data-mage-init='{"extendInstallment": {}}'  -->
+                                <!-- 2. data-mage-init='{"Extend_WarrantyBreeze/js/installment": {}}' -->
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
+                                    <item name="shortname" xsi:type="string">extendInstallment</item>
+                                </item>
+                            </item>
+
+                            <item name="extendWarrantyOffers" xsi:type="array">
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/warranty-offers-base</item>
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Extend_Warranty/js/warranty-offers-base</item>
+                                    <item name="shortname" xsi:type="string">extendWarrantyOffers</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
