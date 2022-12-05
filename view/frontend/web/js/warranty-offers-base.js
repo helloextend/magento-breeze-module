@@ -24,7 +24,6 @@ define([
                     resolve();
                 } else {
                     $(document).on('extendInstallment:initialized', function () {
-                        $(document).off('extendInstallment:initialized');
                         resolve();
                     }.bind(this));
                 }
