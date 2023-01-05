@@ -23,14 +23,8 @@
                     <item name="extendWarranty" xsi:type="array">
                         <item name="items" xsi:type="array">
 
-                            <!-- 'extendInstallment' - is the name used in data-mage-init or x-magento-init -->
                             <item name="extendInstallment" xsi:type="array">
-                                <!-- Path to file with component declaration -->
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
-
-                                <!-- Optional. Helpful if you use multiple names for the same component -->
-                                <!-- 1. data-mage-init='{"extendInstallment": {}}'  -->
-                                <!-- 2. data-mage-init='{"Extend_WarrantyBreeze/js/installment": {}}' -->
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
                                     <item name="shortname" xsi:type="string">extendInstallment</item>
@@ -42,6 +36,24 @@
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_Warranty/js/warranty-offers-base</item>
                                     <item name="shortname" xsi:type="string">extendWarrantyOffers</item>
+                                </item>
+                            </item>
+
+                            <item name="warranty-minicart-mixin" xsi:type="array">
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/cart/minicart-mixin</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
+                            </item>
+
+                            <item name="cartItemWarranty" xsi:type="array">
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/cart/cart-item-warranty</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Extend_Warranty/js/view/cart-item-warranty</item>
+                                    <item name="shortname" xsi:type="string">cartItemWarranty</item>
                                 </item>
                             </item>
                         </item>
