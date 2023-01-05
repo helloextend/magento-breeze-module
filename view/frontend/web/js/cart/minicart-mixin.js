@@ -86,4 +86,23 @@ define([
             original();
         }
     });
+
+    $.mixin('sidebar', {
+
+        /**
+         * Update content after item remove
+         *
+         * @param {Function} original
+         * @param {Object} elem
+         */
+        _removeItemAfter: function (originalMethod, elem) {
+            // CUSTOMIZATION HERE: trigger additional event for Extend Warranty
+            var productData = this._getProductById(Number(elem.data('cart-item')));
+            if (!_.isUndefined(productData)) {
+                $(document.body).trigger('extend:removeFromCart', productData);
+            }
+
+            originalMethod(elem);
+        }
+    });
 });
