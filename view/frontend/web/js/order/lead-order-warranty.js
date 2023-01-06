@@ -10,10 +10,10 @@ define([
     'mage/translate',
     'Magento_Ui/js/modal/alert',
     'Magento_Customer/js/customer-data',
-    //'Extend_Warranty/js/extendtrk/actions',
+    'Extend_Warranty/js/extendtrk/actions',
     'extendWarrantyOffers',
     'domReady!'
-], function ($, _, $t, alert, customerData/*, trackActions*/) {
+], function ($, _, $t, alert, customerData, trackActions) {
     'use strict';
 
     $.widget('mage.leadOrderWarranty', 'extendWarrantyOffers', {
@@ -107,7 +107,7 @@ define([
         _onAddToCartSuccess: function (response) {
             // track warranty 'Add To Cart'
             if (this.options.trackingEnabled && typeof (response.trackingData) !== 'undefined') {
-                //trackActions.trackOfferAddToCart(response.trackingData);
+                trackActions.trackOfferAddToCart(response.trackingData);
             }
 
             // trigger warranty 'Add To Cart' event
