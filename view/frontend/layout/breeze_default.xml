@@ -22,30 +22,59 @@
                 <argument name="bundles" xsi:type="array">
                     <item name="extendWarranty" xsi:type="array">
                         <item name="items" xsi:type="array">
-
+                            <!-- Extend SDK Installation -->
                             <item name="extendInstallment" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_WarrantyBreeze/js/installment</item>
                                     <item name="shortname" xsi:type="string">extendInstallment</item>
                                 </item>
                             </item>
 
+                            <!-- Extend Warranty basic class -->
                             <item name="extendWarrantyOffers" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/warranty-offers-base</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_Warranty/js/warranty-offers-base</item>
                                     <item name="shortname" xsi:type="string">extendWarrantyOffers</item>
                                 </item>
                             </item>
 
+                            <!-- Extend Tracking -->
+                            <item name="extendTrackingActions" xsi:type="array">
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/extendtrk/actions</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Extend_Warranty/js/extendtrk/actions</item>
+                                    <item name="shortname" xsi:type="string">extendTrackingActions</item>
+                                </item>
+                            </item>
+                            <item name="extendTrackingService" xsi:type="array">
+                                <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/tracking-service</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Extend_Warranty/js/tracking-service</item>
+                                    <item name="shortname" xsi:type="string">extendTrackingService</item>
+                                </item>
+                            </item>
+
+                            <!-- Extend Warranty mini-cart -->
                             <item name="warranty-minicart-mixin" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/cart/minicart-mixin</item>
                                 <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
                                     <param name="path">warranty/enableExtend/enable</param>
                                 </item>
                             </item>
-
                             <item name="cartItemWarranty" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/cart/cart-item-warranty</item>
                                 <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">

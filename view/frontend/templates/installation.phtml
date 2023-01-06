@@ -24,26 +24,11 @@ $viewModel = $block->getData('viewModel');
         }
         </script>
 
-        <script>
-            /*require.config({
-                config: {
-                    mixins: {
-                        'Magento_Checkout/js/view/minicart': {
-                            'Extend_Warranty/js/view/minicart-mixin': true
-                        },
-                        'Magento_Checkout/js/sidebar': {
-                            'Extend_Warranty/js/sidebar-mixin': true
-                        }
-                    }
-                }
-            });*/
-        </script>
-
         <?php if ($block->getTrackingEnabled()): ?>
         <script type="text/x-magento-init">
         {
             "*": {
-                "Extend_Warranty/js/tracking-service": {}
+                "extendTrackingService": {}
             }
         }
         </script>
