@@ -18,6 +18,9 @@
                         <item name="items" xsi:type="array">
                             <item name="simpleProductWarranty" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/product/simple-warranty</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_Warranty/js/product/simple-warranty</item>
                                     <item name="shortname" xsi:type="string">simpleProductWarranty</item>
@@ -25,6 +28,9 @@
                             </item>
                             <item name="configurableProductWarranty" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/product/configurable-warranty</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_Warranty/js/product/configurable-warranty</item>
                                     <item name="shortname" xsi:type="string">configurableProductWarranty</item>
@@ -32,6 +38,9 @@
                             </item>
                             <item name="groupedProductWarranty" xsi:type="array">
                                 <item name="path" xsi:type="string">Extend_WarrantyBreeze/js/product/grouped-warranty</item>
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">warranty/enableExtend/enable</param>
+                                </item>
                                 <item name="names" xsi:type="array">
                                     <item name="fullname" xsi:type="string">Extend_Warranty/js/product/grouped-warranty</item>
                                     <item name="shortname" xsi:type="string">groupedProductWarranty</item>
